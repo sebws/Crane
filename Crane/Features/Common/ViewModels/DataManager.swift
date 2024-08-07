@@ -5,7 +5,7 @@ class DataManager {
     var realDataPoints: [Double] = []
     var interpolatedDataPoints: [Double] = []
     var maxVal: Double = 0
-    private var lastRealDataPoint: Double?
+    var currentVal: Double?
     
     private init() {}
     
@@ -14,20 +14,22 @@ class DataManager {
     func addDataPoint(_ dataPoint: Double) {
         maxVal = max(maxVal, dataPoint)
         realDataPoints.append(dataPoint)
-        lastRealDataPoint = dataPoint
+        currentVal = dataPoint
         interpolateDataPoints()
     }
 
     func interpolateDataPoints() {
-        guard let lastRealDataPoint else { return }
-        interpolatedDataPoints.append(lastRealDataPoint)
+        guard let currentVal else { return }
+        let recentDataPoint = interpolatedDataPoints.last ?? currentVal
+        let smoothVal = 0.5 * currentVal + (1 - 0.5) * recentDataPoint
+        interpolatedDataPoints.append(smoothVal)
         if interpolatedDataPoints.count > 7 * 60 {
             interpolatedDataPoints.removeFirst()
         }
     }
     
     func clearData() {
-        lastRealDataPoint = nil
+        currentVal = nil
         maxVal = 0
         realDataPoints = []
         interpolatedDataPoints = []

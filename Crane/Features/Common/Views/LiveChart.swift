@@ -2,7 +2,6 @@ import Charts
 import SwiftUI
 
 struct LiveChart: View {
-    var model = ScaleDataViewModel.model
     let dataManager = DataManager.model
     let displayLinkManager = DisplayLinkManager.model
 
@@ -15,7 +14,7 @@ struct LiveChart: View {
                 ).interpolationMethod(.catmullRom)
             }
 
-            RuleMark(y: .value("Max", model.maxVal)).foregroundStyle(.gray).lineStyle(StrokeStyle(dash: [5]))
+            RuleMark(y: .value("Max", dataManager.maxVal)).foregroundStyle(.gray).lineStyle(StrokeStyle(dash: [5]))
         }
         .chartXAxis(.hidden)
         .chartYAxisLabel {

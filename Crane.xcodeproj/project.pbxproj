@@ -29,7 +29,6 @@
 		96DFF82A2C56235B002E3E24 /* CraneTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 96DFF8292C56235B002E3E24 /* CraneTests.swift */; };
 		96DFF8342C56235B002E3E24 /* CraneUITests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 96DFF8332C56235B002E3E24 /* CraneUITests.swift */; };
 		96DFF8362C56235B002E3E24 /* CraneUITestsLaunchTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 96DFF8352C56235B002E3E24 /* CraneUITestsLaunchTests.swift */; };
-		96DFF84B2C563164002E3E24 /* LiveViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 96DFF84A2C563164002E3E24 /* LiveViewModel.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -76,7 +75,6 @@
 		96DFF82F2C56235B002E3E24 /* CraneUITests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = CraneUITests.xctest; sourceTree = BUILT_PRODUCTS_DIR; };
 		96DFF8332C56235B002E3E24 /* CraneUITests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CraneUITests.swift; sourceTree = "<group>"; };
 		96DFF8352C56235B002E3E24 /* CraneUITestsLaunchTests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CraneUITestsLaunchTests.swift; sourceTree = "<group>"; };
-		96DFF84A2C563164002E3E24 /* LiveViewModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = LiveViewModel.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -317,7 +315,6 @@
 		96DFF8492C563114002E3E24 /* ViewModels */ = {
 			isa = PBXGroup;
 			children = (
-				96DFF84A2C563164002E3E24 /* LiveViewModel.swift */,
 			);
 			path = ViewModels;
 			sourceTree = "<group>";
@@ -464,7 +461,6 @@
 				96BA3BA72C61FBB500FB266B /* UnitModel.swift in Sources */,
 				96BA3BA22C5FC95C00FB266B /* NewActionScreen.swift in Sources */,
 				9608F1CB2C5931E600B34E81 /* LiveScreen.swift in Sources */,
-				96DFF84B2C563164002E3E24 /* LiveViewModel.swift in Sources */,
 				96BA3B9B2C5FA43800FB266B /* RepeaterAdderScreen.swift in Sources */,
 				96BA3B972C5F8F4500FB266B /* Repeater.swift in Sources */,
 				96BA3B942C5F8C8800FB266B /* RepeaterMenuScreen.swift in Sources */,

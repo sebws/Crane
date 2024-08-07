@@ -19,7 +19,7 @@ struct LiveScreen: View {
                 RoundedRectangle(cornerRadius: /*@START_MENU_TOKEN@*/25.0/*@END_MENU_TOKEN@*/).fill(.regularMaterial).overlay {
                     VStack {
                         Text("Current").font(.headline)
-                        Text("\(String(format: "%.1f", model.currentVal))").font(.largeTitle).monospaced()
+                        Text("\(String(format: "%.1f", model.currentVal ?? 0))").font(.largeTitle).monospaced()
                     }
                 }
             }
