@@ -6,11 +6,11 @@ class DataManager {
     var interpolatedDataPoints: [Double] = []
     var maxVal: Double = 0
     var currentVal: Double?
-    
+
     private init() {}
-    
+
     static let model = DataManager()
-    
+
     func addDataPoint(_ dataPoint: Double) {
         maxVal = max(maxVal, dataPoint)
         realDataPoints.append(dataPoint)
@@ -27,7 +27,7 @@ class DataManager {
             interpolatedDataPoints.removeFirst()
         }
     }
-    
+
     func clearData() {
         currentVal = nil
         maxVal = 0

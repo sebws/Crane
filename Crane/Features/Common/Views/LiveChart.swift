@@ -7,14 +7,18 @@ struct LiveChart: View {
 
     var body: some View {
         Chart {
-            ForEach(Array(dataManager.interpolatedDataPoints.enumerated()), id: \.0) { index, magnitude in
+            ForEach(
+                Array(dataManager.interpolatedDataPoints.enumerated()), id: \.0
+            ) { index, magnitude in
                 LineMark(
                     x: .value("Time", index),
                     y: .value("Kg", magnitude)
                 ).interpolationMethod(.linear)
             }
 
-            RuleMark(y: .value("Max", dataManager.maxVal)).foregroundStyle(.gray).lineStyle(StrokeStyle(dash: [5]))
+            RuleMark(y: .value("Max", dataManager.maxVal)).foregroundStyle(
+                .gray
+            ).lineStyle(StrokeStyle(dash: [5]))
         }
         .chartXAxis(.hidden)
         .chartYAxisLabel {

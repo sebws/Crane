@@ -1,5 +1,5 @@
-import SwiftData
 import CoreBluetoothMock
+import SwiftData
 import SwiftUI
 
 struct ContentView: View {
