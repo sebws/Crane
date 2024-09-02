@@ -1,15 +1,16 @@
 import SwiftData
+import CoreBluetoothMock
 import SwiftUI
 
 struct ContentView: View {
-    @Environment(\.modelContext) private var modelContext
+    @State private var deviceManager = DeviceManager.model
 
     var body: some View {
         NavigationStack {
             VStack {
                 List {
                     Section {
-                        NavigationLink(destination: ConnectScreen()) {
+                        NavigationLink(destination: DeviceList()) {
                             Text("Connect Scale")
                         }
                     }

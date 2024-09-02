@@ -11,7 +11,7 @@ struct LiveChart: View {
                 LineMark(
                     x: .value("Time", index),
                     y: .value("Kg", magnitude)
-                ).interpolationMethod(.catmullRom)
+                ).interpolationMethod(.linear)
             }
 
             RuleMark(y: .value("Max", dataManager.maxVal)).foregroundStyle(.gray).lineStyle(StrokeStyle(dash: [5]))
