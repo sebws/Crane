@@ -19,7 +19,7 @@ struct DeviceList: View {
                     Text(device.rawValue)
                 }
             }
-        }.navigationTitle("Device List")
+        }.navigationTitle("Select device type")
     }
 }
 
