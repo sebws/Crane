@@ -43,7 +43,7 @@ extension WHC06: CBCentralManagerDelegate {
             if self.selectedPeripheral == nil,
                 !self.discoveredDeviceOptions.contains(where: {
                     $0.identifier == peripheral.identifier
-                })
+                }), peripheral.name == "IF_B7"
             {
                 self.discoveredDeviceOptions.append(peripheral)
             }

@@ -14,7 +14,7 @@ private class WHC06CBMPeripheralSpecDelegate: CBMPeripheralSpecDelegate {
             timer in
             let config: CBMAdvertisementConfig = CBMAdvertisementConfig(
                 data: [
-                    CBMAdvertisementDataLocalNameKey: "WH-C06",
+                    CBMAdvertisementDataLocalNameKey: "IF_B7",
                     CBMAdvertisementDataServiceUUIDsKey: [],
                     CBMAdvertisementDataIsConnectable: true as NSNumber,
                     CBMAdvertisementDataManufacturerDataKey: Data(
@@ -36,7 +36,7 @@ private class WHC06CBMPeripheralSpecDelegate: CBMPeripheralSpecDelegate {
 
 let WHC06Mock = CBMPeripheralSpec.simulatePeripheral().advertising(
     advertisementData: [
-        CBMAdvertisementDataLocalNameKey: "WH-C06",
+        CBMAdvertisementDataLocalNameKey: "IF_B7",
         CBMAdvertisementDataServiceUUIDsKey: [],
         CBMAdvertisementDataIsConnectable: true as NSNumber,
         CBMAdvertisementDataManufacturerDataKey: Data([
@@ -48,7 +48,7 @@ let WHC06Mock = CBMPeripheralSpec.simulatePeripheral().advertising(
     withInterval: 0.1,
     alsoWhenConnected: true
 ).connectable(
-    name: "WH-C06", services: [],
+    name: "IF_B7", services: [],
     delegate: WHC06CBMPeripheralSpecDelegate(),
     connectionInterval: 1
 ).build()
