@@ -20,14 +20,12 @@ let STABLE_OFFSET = 16
     private var centralManager: CBCentralManager?
 
     required init(dataManager: DataManager) {
-        print("init whc06")
         self.dataManager = dataManager
         self.centralManager = CBCentralManagerFactory.instance(
             delegate: self, queue: .main, forceMock: false)
     }
 
     deinit {
-        print("deinit WHC06")
         disconnect()
     }
 }
@@ -51,14 +49,23 @@ extension WHC06: CBCentralManagerDelegate {
             }
             return
         }
+
+        guard manufacturerData.count >= WEIGHT_OFFSET + 2 else {
+            return
+        }
+
         if self.state == .connecting {
             self.state = .connected
         }
 
-        let bytes = [UInt8](manufacturerData)
-        let weightHigh = Int16(bytes[WEIGHT_OFFSET]) << 8
-        let weightLow = Int16(bytes[WEIGHT_OFFSET + 1])
-        let weight = Double(weightHigh | weightLow)
+        let weightRange = WEIGHT_OFFSET..<WEIGHT_OFFSET + 2
+        let weightBytes = manufacturerData.subdata(in: weightRange)
+
+        let weight = weightBytes.withUnsafeBytes { buffer in
+            let value = buffer.load(as: Int16.self)
+            return Double(Int16(bigEndian: value))
+        }
+
         let val = (weight / 100)
         self.dataManager.addDataPoint(val)
     }
