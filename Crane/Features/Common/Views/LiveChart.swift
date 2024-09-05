@@ -20,6 +20,7 @@ struct LiveChart: View {
                 .gray
             ).lineStyle(StrokeStyle(dash: [5]))
         }
+        .chartXScale(domain: [0,420])
         .chartXAxis(.hidden)
         .chartYAxisLabel {
             Text("kg")

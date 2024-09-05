@@ -3,7 +3,7 @@ import SwiftUI
 @Observable
 class DataManager {
     var realDataPoints: [Double] = []
-    var interpolatedDataPoints: [Double] = []
+    var interpolatedDataPoints: [Double] = Array(repeating: 0, count: 420)
     var maxVal: Double = 0
     var currentVal: Double?
 
