@@ -3,7 +3,6 @@ import SwiftUI
 
 struct LiveChart: View {
     let dataManager = DataManager.model
-    let displayLinkManager = DisplayLinkManager.model
 
     var body: some View {
         Chart {
@@ -24,8 +23,10 @@ struct LiveChart: View {
         .chartXAxis(.hidden)
         .chartYAxisLabel {
             Text("kg")
-        }.onChange(of: displayLinkManager.needsUpdate) {
-            displayLinkManager.needsUpdate = false
+        }.task {
+            for await _ in CADisplayLink.timestamps() {
+                dataManager.interpolateDataPoints()
+            }
         }
     }
 }

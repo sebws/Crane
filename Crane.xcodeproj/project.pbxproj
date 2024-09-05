@@ -9,6 +9,7 @@
 /* Begin PBXBuildFile section */
 		9608F1C12C59225E00B34E81 /* LiveChart.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9608F1C02C59225E00B34E81 /* LiveChart.swift */; };
 		9608F1CB2C5931E600B34E81 /* LiveScreen.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9608F1CA2C5931E600B34E81 /* LiveScreen.swift */; };
+		963238292C87410A00E3E85F /* DisplayLink.swift in Sources */ = {isa = PBXBuildFile; fileRef = 963238282C87410500E3E85F /* DisplayLink.swift */; };
 		964304B92C82C9A800E45F41 /* WHC06.swift in Sources */ = {isa = PBXBuildFile; fileRef = 964304B82C82C9A800E45F41 /* WHC06.swift */; };
 		964304BB2C83357300E45F41 /* WHC06Mock.swift in Sources */ = {isa = PBXBuildFile; fileRef = 964304BA2C83356500E45F41 /* WHC06Mock.swift */; };
 		966CCEE32C5A5C9600C31C0D /* ConnectScreen.swift in Sources */ = {isa = PBXBuildFile; fileRef = 966CCEE22C5A5C9600C31C0D /* ConnectScreen.swift */; };
@@ -26,7 +27,6 @@
 		96BA3BA52C61E38E00FB266B /* WeightRecord.swift in Sources */ = {isa = PBXBuildFile; fileRef = 96BA3BA42C61E38E00FB266B /* WeightRecord.swift */; };
 		96BA3BA72C61FBB500FB266B /* UnitModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 96BA3BA62C61FBB500FB266B /* UnitModel.swift */; };
 		96DD6E7B2C62FD2F00F13ABC /* DataManager.swift in Sources */ = {isa = PBXBuildFile; fileRef = 96DD6E7A2C62FD2F00F13ABC /* DataManager.swift */; };
-		96DD6E7D2C62FD9800F13ABC /* DisplayLinkManager.swift in Sources */ = {isa = PBXBuildFile; fileRef = 96DD6E7C2C62FD9800F13ABC /* DisplayLinkManager.swift */; };
 		96DFF8172C562355002E3E24 /* CraneApp.swift in Sources */ = {isa = PBXBuildFile; fileRef = 96DFF8162C562355002E3E24 /* CraneApp.swift */; };
 		96DFF8192C562355002E3E24 /* ContentView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 96DFF8182C562355002E3E24 /* ContentView.swift */; };
 		96DFF81D2C56235A002E3E24 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 96DFF81C2C56235A002E3E24 /* Assets.xcassets */; };
@@ -59,6 +59,7 @@
 /* Begin PBXFileReference section */
 		9608F1C02C59225E00B34E81 /* LiveChart.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = LiveChart.swift; sourceTree = "<group>"; };
 		9608F1CA2C5931E600B34E81 /* LiveScreen.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = LiveScreen.swift; sourceTree = "<group>"; };
+		963238282C87410500E3E85F /* DisplayLink.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = DisplayLink.swift; sourceTree = "<group>"; };
 		964304B82C82C9A800E45F41 /* WHC06.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = WHC06.swift; sourceTree = "<group>"; };
 		964304BA2C83356500E45F41 /* WHC06Mock.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = WHC06Mock.swift; sourceTree = "<group>"; };
 		966CCEDD2C5A546200C31C0D /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist; path = Info.plist; sourceTree = "<group>"; };
@@ -76,7 +77,6 @@
 		96BA3BA42C61E38E00FB266B /* WeightRecord.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = WeightRecord.swift; sourceTree = "<group>"; };
 		96BA3BA62C61FBB500FB266B /* UnitModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = UnitModel.swift; sourceTree = "<group>"; };
 		96DD6E7A2C62FD2F00F13ABC /* DataManager.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = DataManager.swift; sourceTree = "<group>"; };
-		96DD6E7C2C62FD9800F13ABC /* DisplayLinkManager.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = DisplayLinkManager.swift; sourceTree = "<group>"; };
 		96DFF8132C562355002E3E24 /* Crane.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = Crane.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		96DFF8162C562355002E3E24 /* CraneApp.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CraneApp.swift; sourceTree = "<group>"; };
 		96DFF8182C562355002E3E24 /* ContentView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ContentView.swift; sourceTree = "<group>"; };
@@ -140,8 +140,8 @@
 		9608F1C22C5922C800B34E81 /* ViewModels */ = {
 			isa = PBXGroup;
 			children = (
+				963238282C87410500E3E85F /* DisplayLink.swift */,
 				96F2B41F2C70A04C00D69178 /* DeviceManager.swift */,
-				96DD6E7C2C62FD9800F13ABC /* DisplayLinkManager.swift */,
 				96DD6E7A2C62FD2F00F13ABC /* DataManager.swift */,
 			);
 			path = ViewModels;
@@ -500,7 +500,7 @@
 				96BA3B972C5F8F4500FB266B /* Repeater.swift in Sources */,
 				96BA3B942C5F8C8800FB266B /* RepeaterMenuScreen.swift in Sources */,
 				967B393E2C6A0E700083E254 /* Progressor.swift in Sources */,
-				96DD6E7D2C62FD9800F13ABC /* DisplayLinkManager.swift in Sources */,
+				963238292C87410A00E3E85F /* DisplayLink.swift in Sources */,
 				96DFF8172C562355002E3E24 /* CraneApp.swift in Sources */,
 				96BA3BA02C5FB91300FB266B /* ActionEntryView.swift in Sources */,
 				968FA56D2C6A41940082685C /* ProgressorMock.swift in Sources */,
