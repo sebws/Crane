@@ -85,7 +85,7 @@ extension WHC06: CBCentralManagerDelegate {
     }
 
     func connect(to peripheral: CBPeripheral) {
-        state = .connected
+        self.state = .connecting
         self.selectedPeripheral = peripheral
     }
 
