@@ -7,11 +7,16 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
+		9606E6F62CB176020014B899 /* RepeaterPlayer.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9606E6F52CB175FE0014B899 /* RepeaterPlayer.swift */; };
 		9608F1C12C59225E00B34E81 /* LiveChart.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9608F1C02C59225E00B34E81 /* LiveChart.swift */; };
 		9608F1CB2C5931E600B34E81 /* LiveScreen.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9608F1CA2C5931E600B34E81 /* LiveScreen.swift */; };
 		963238292C87410A00E3E85F /* DisplayLink.swift in Sources */ = {isa = PBXBuildFile; fileRef = 963238282C87410500E3E85F /* DisplayLink.swift */; };
 		964304B92C82C9A800E45F41 /* WHC06.swift in Sources */ = {isa = PBXBuildFile; fileRef = 964304B82C82C9A800E45F41 /* WHC06.swift */; };
 		964304BB2C83357300E45F41 /* WHC06Mock.swift in Sources */ = {isa = PBXBuildFile; fileRef = 964304BA2C83356500E45F41 /* WHC06Mock.swift */; };
+		964760952C8B18D1000627AD /* RepeaterEditor.swift in Sources */ = {isa = PBXBuildFile; fileRef = 964760942C8B18CC000627AD /* RepeaterEditor.swift */; };
+		964760A42C8B2997000627AD /* ModelContainerPreview.swift in Sources */ = {isa = PBXBuildFile; fileRef = 964760A12C8B2997000627AD /* ModelContainerPreview.swift */; };
+		964760A52C8B2A7F000627AD /* Preview+ModelContainer.swift in Sources */ = {isa = PBXBuildFile; fileRef = 964760A22C8B2997000627AD /* Preview+ModelContainer.swift */; };
+		964760A72C8B2A8C000627AD /* SampleDataRepeater.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9647609F2C8B2994000627AD /* SampleDataRepeater.swift */; };
 		966CCEE32C5A5C9600C31C0D /* ConnectScreen.swift in Sources */ = {isa = PBXBuildFile; fileRef = 966CCEE22C5A5C9600C31C0D /* ConnectScreen.swift */; };
 		967B393E2C6A0E700083E254 /* Progressor.swift in Sources */ = {isa = PBXBuildFile; fileRef = 967B393D2C6A0E6C0083E254 /* Progressor.swift */; };
 		967B39432C6A3EE70083E254 /* CoreBluetoothMock in Frameworks */ = {isa = PBXBuildFile; productRef = 967B39422C6A3EE70083E254 /* CoreBluetoothMock */; };
@@ -19,13 +24,25 @@
 		968FA56D2C6A41940082685C /* ProgressorMock.swift in Sources */ = {isa = PBXBuildFile; fileRef = 968FA56C2C6A41930082685C /* ProgressorMock.swift */; };
 		96BA3B942C5F8C8800FB266B /* RepeaterMenuScreen.swift in Sources */ = {isa = PBXBuildFile; fileRef = 96BA3B932C5F8C8800FB266B /* RepeaterMenuScreen.swift */; };
 		96BA3B972C5F8F4500FB266B /* Repeater.swift in Sources */ = {isa = PBXBuildFile; fileRef = 96BA3B962C5F8F4500FB266B /* Repeater.swift */; };
-		96BA3B992C5F94DB00FB266B /* RepeaterScreen.swift in Sources */ = {isa = PBXBuildFile; fileRef = 96BA3B982C5F94DB00FB266B /* RepeaterScreen.swift */; };
 		96BA3B9B2C5FA43800FB266B /* RepeaterAdderScreen.swift in Sources */ = {isa = PBXBuildFile; fileRef = 96BA3B9A2C5FA43800FB266B /* RepeaterAdderScreen.swift */; };
 		96BA3B9D2C5FAE5A00FB266B /* Action.swift in Sources */ = {isa = PBXBuildFile; fileRef = 96BA3B9C2C5FAE5A00FB266B /* Action.swift */; };
 		96BA3BA02C5FB91300FB266B /* ActionEntryView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 96BA3B9F2C5FB91300FB266B /* ActionEntryView.swift */; };
-		96BA3BA22C5FC95C00FB266B /* NewActionScreen.swift in Sources */ = {isa = PBXBuildFile; fileRef = 96BA3BA12C5FC95C00FB266B /* NewActionScreen.swift */; };
-		96BA3BA52C61E38E00FB266B /* WeightRecord.swift in Sources */ = {isa = PBXBuildFile; fileRef = 96BA3BA42C61E38E00FB266B /* WeightRecord.swift */; };
+		96BA3BA22C5FC95C00FB266B /* ActionEditor.swift in Sources */ = {isa = PBXBuildFile; fileRef = 96BA3BA12C5FC95C00FB266B /* ActionEditor.swift */; };
 		96BA3BA72C61FBB500FB266B /* UnitModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 96BA3BA62C61FBB500FB266B /* UnitModel.swift */; };
+		96D402822CE03E9200A1884F /* ModelContainer.swift in Sources */ = {isa = PBXBuildFile; fileRef = 96D402812CE03E8E00A1884F /* ModelContainer.swift */; };
+		96D4028B2CE0408A00A1884F /* DeviceManaging.swift in Sources */ = {isa = PBXBuildFile; fileRef = 96D402882CE0408A00A1884F /* DeviceManaging.swift */; };
+		96D4028C2CE0408A00A1884F /* DataManaging.swift in Sources */ = {isa = PBXBuildFile; fileRef = 96D402872CE0408A00A1884F /* DataManaging.swift */; };
+		96D4028D2CE0408A00A1884F /* ServiceContainer.swift in Sources */ = {isa = PBXBuildFile; fileRef = 96D4028A2CE0408A00A1884F /* ServiceContainer.swift */; };
+		96D402902CE043C900A1884F /* DeviceType.swift in Sources */ = {isa = PBXBuildFile; fileRef = 96D4028E2CE043C900A1884F /* DeviceType.swift */; };
+		96D402932CE0446100A1884F /* AppConstants.swift in Sources */ = {isa = PBXBuildFile; fileRef = 96D402922CE0446100A1884F /* AppConstants.swift */; };
+		96D402962CE045E600A1884F /* BluetoothConstants.swift in Sources */ = {isa = PBXBuildFile; fileRef = 96D402942CE045E600A1884F /* BluetoothConstants.swift */; };
+		96D402982CE04A0A00A1884F /* Rest.swift in Sources */ = {isa = PBXBuildFile; fileRef = 96D402972CE04A0A00A1884F /* Rest.swift */; };
+		96D4029C2CE0721C00A1884F /* RepeaterList.swift in Sources */ = {isa = PBXBuildFile; fileRef = 96D4029B2CE0721C00A1884F /* RepeaterList.swift */; };
+		96D4029D2CE0721C00A1884F /* ActionForm.swift in Sources */ = {isa = PBXBuildFile; fileRef = 96D402992CE0721C00A1884F /* ActionForm.swift */; };
+		96D4029E2CE0721C00A1884F /* RepeaterForm.swift in Sources */ = {isa = PBXBuildFile; fileRef = 96D4029A2CE0721C00A1884F /* RepeaterForm.swift */; };
+		96D402A22CE085FC00A1884F /* RepeaterPlayerState.swift in Sources */ = {isa = PBXBuildFile; fileRef = 96D402A12CE085FC00A1884F /* RepeaterPlayerState.swift */; };
+		96D402A42CE0866C00A1884F /* TargetRangeChart.swift in Sources */ = {isa = PBXBuildFile; fileRef = 96D402A32CE0866C00A1884F /* TargetRangeChart.swift */; };
+		96D402A72CE08C4D00A1884F /* ServiceEnvironmentKey.swift in Sources */ = {isa = PBXBuildFile; fileRef = 96D402A52CE08C4D00A1884F /* ServiceEnvironmentKey.swift */; };
 		96DD6E7B2C62FD2F00F13ABC /* DataManager.swift in Sources */ = {isa = PBXBuildFile; fileRef = 96DD6E7A2C62FD2F00F13ABC /* DataManager.swift */; };
 		96DFF8172C562355002E3E24 /* CraneApp.swift in Sources */ = {isa = PBXBuildFile; fileRef = 96DFF8162C562355002E3E24 /* CraneApp.swift */; };
 		96DFF8192C562355002E3E24 /* ContentView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 96DFF8182C562355002E3E24 /* ContentView.swift */; };
@@ -57,25 +74,42 @@
 /* End PBXContainerItemProxy section */
 
 /* Begin PBXFileReference section */
+		9606E6F52CB175FE0014B899 /* RepeaterPlayer.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = RepeaterPlayer.swift; sourceTree = "<group>"; };
 		9608F1C02C59225E00B34E81 /* LiveChart.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = LiveChart.swift; sourceTree = "<group>"; };
 		9608F1CA2C5931E600B34E81 /* LiveScreen.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = LiveScreen.swift; sourceTree = "<group>"; };
 		963238282C87410500E3E85F /* DisplayLink.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = DisplayLink.swift; sourceTree = "<group>"; };
 		964304B82C82C9A800E45F41 /* WHC06.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = WHC06.swift; sourceTree = "<group>"; };
 		964304BA2C83356500E45F41 /* WHC06Mock.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = WHC06Mock.swift; sourceTree = "<group>"; };
-		966CCEDD2C5A546200C31C0D /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist; path = Info.plist; sourceTree = "<group>"; };
+		964760942C8B18CC000627AD /* RepeaterEditor.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = RepeaterEditor.swift; sourceTree = "<group>"; };
+		9647609F2C8B2994000627AD /* SampleDataRepeater.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SampleDataRepeater.swift; sourceTree = "<group>"; };
+		964760A12C8B2997000627AD /* ModelContainerPreview.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ModelContainerPreview.swift; sourceTree = "<group>"; };
+		964760A22C8B2997000627AD /* Preview+ModelContainer.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "Preview+ModelContainer.swift"; sourceTree = "<group>"; };
+		966CCEDD2C5A546200C31C0D /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
 		966CCEE22C5A5C9600C31C0D /* ConnectScreen.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ConnectScreen.swift; sourceTree = "<group>"; };
 		967B393D2C6A0E6C0083E254 /* Progressor.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Progressor.swift; sourceTree = "<group>"; };
 		968FA5692C6A40B80082685C /* CBTypeAlias.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CBTypeAlias.swift; sourceTree = "<group>"; };
 		968FA56C2C6A41930082685C /* ProgressorMock.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ProgressorMock.swift; sourceTree = "<group>"; };
 		96BA3B932C5F8C8800FB266B /* RepeaterMenuScreen.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = RepeaterMenuScreen.swift; sourceTree = "<group>"; };
 		96BA3B962C5F8F4500FB266B /* Repeater.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Repeater.swift; sourceTree = "<group>"; };
-		96BA3B982C5F94DB00FB266B /* RepeaterScreen.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = RepeaterScreen.swift; sourceTree = "<group>"; };
 		96BA3B9A2C5FA43800FB266B /* RepeaterAdderScreen.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = RepeaterAdderScreen.swift; sourceTree = "<group>"; };
 		96BA3B9C2C5FAE5A00FB266B /* Action.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Action.swift; sourceTree = "<group>"; };
 		96BA3B9F2C5FB91300FB266B /* ActionEntryView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ActionEntryView.swift; sourceTree = "<group>"; };
-		96BA3BA12C5FC95C00FB266B /* NewActionScreen.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = NewActionScreen.swift; sourceTree = "<group>"; };
-		96BA3BA42C61E38E00FB266B /* WeightRecord.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = WeightRecord.swift; sourceTree = "<group>"; };
+		96BA3BA12C5FC95C00FB266B /* ActionEditor.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ActionEditor.swift; sourceTree = "<group>"; };
 		96BA3BA62C61FBB500FB266B /* UnitModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = UnitModel.swift; sourceTree = "<group>"; };
+		96D402812CE03E8E00A1884F /* ModelContainer.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ModelContainer.swift; sourceTree = "<group>"; };
+		96D402872CE0408A00A1884F /* DataManaging.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = DataManaging.swift; sourceTree = "<group>"; };
+		96D402882CE0408A00A1884F /* DeviceManaging.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = DeviceManaging.swift; sourceTree = "<group>"; };
+		96D4028A2CE0408A00A1884F /* ServiceContainer.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ServiceContainer.swift; sourceTree = "<group>"; };
+		96D4028E2CE043C900A1884F /* DeviceType.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = DeviceType.swift; sourceTree = "<group>"; };
+		96D402922CE0446100A1884F /* AppConstants.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppConstants.swift; sourceTree = "<group>"; };
+		96D402942CE045E600A1884F /* BluetoothConstants.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = BluetoothConstants.swift; sourceTree = "<group>"; };
+		96D402972CE04A0A00A1884F /* Rest.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Rest.swift; sourceTree = "<group>"; };
+		96D402992CE0721C00A1884F /* ActionForm.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ActionForm.swift; sourceTree = "<group>"; };
+		96D4029A2CE0721C00A1884F /* RepeaterForm.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = RepeaterForm.swift; sourceTree = "<group>"; };
+		96D4029B2CE0721C00A1884F /* RepeaterList.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = RepeaterList.swift; sourceTree = "<group>"; };
+		96D402A12CE085FC00A1884F /* RepeaterPlayerState.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = RepeaterPlayerState.swift; sourceTree = "<group>"; };
+		96D402A32CE0866C00A1884F /* TargetRangeChart.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TargetRangeChart.swift; sourceTree = "<group>"; };
+		96D402A52CE08C4D00A1884F /* ServiceEnvironmentKey.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ServiceEnvironmentKey.swift; sourceTree = "<group>"; };
 		96DD6E7A2C62FD2F00F13ABC /* DataManager.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = DataManager.swift; sourceTree = "<group>"; };
 		96DFF8132C562355002E3E24 /* Crane.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = Crane.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		96DFF8162C562355002E3E24 /* CraneApp.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CraneApp.swift; sourceTree = "<group>"; };
@@ -118,41 +152,20 @@
 /* End PBXFrameworksBuildPhase section */
 
 /* Begin PBXGroup section */
-		9608F1BE2C5912E600B34E81 /* Common */ = {
-			isa = PBXGroup;
-			children = (
-				967B393A2C6A0DFF0083E254 /* Peripherals */,
-				96BA3BA32C61E38100FB266B /* Models */,
-				9608F1C22C5922C800B34E81 /* ViewModels */,
-				9608F1BF2C5912FD00B34E81 /* Views */,
-			);
-			path = Common;
-			sourceTree = "<group>";
-		};
-		9608F1BF2C5912FD00B34E81 /* Views */ = {
-			isa = PBXGroup;
-			children = (
-				9608F1C02C59225E00B34E81 /* LiveChart.swift */,
-			);
-			path = Views;
-			sourceTree = "<group>";
-		};
-		9608F1C22C5922C800B34E81 /* ViewModels */ = {
-			isa = PBXGroup;
-			children = (
-				963238282C87410500E3E85F /* DisplayLink.swift */,
-				96F2B41F2C70A04C00D69178 /* DeviceManager.swift */,
-				96DD6E7A2C62FD2F00F13ABC /* DataManager.swift */,
-			);
-			path = ViewModels;
-			sourceTree = "<group>";
-		};
 		9608F1C82C5931AA00B34E81 /* Screens */ = {
 			isa = PBXGroup;
 			children = (
 				9608F1CA2C5931E600B34E81 /* LiveScreen.swift */,
 			);
 			path = Screens;
+			sourceTree = "<group>";
+		};
+		964760A02C8B2994000627AD /* SampleData */ = {
+			isa = PBXGroup;
+			children = (
+				9647609F2C8B2994000627AD /* SampleDataRepeater.swift */,
+			);
+			path = SampleData;
 			sourceTree = "<group>";
 		};
 		966CCEE02C5A5C1B00C31C0D /* Connect */ = {
@@ -181,14 +194,13 @@
 			path = Models;
 			sourceTree = "<group>";
 		};
-		967B393A2C6A0DFF0083E254 /* Peripherals */ = {
+		967B393A2C6A0DFF0083E254 /* Devices */ = {
 			isa = PBXGroup;
 			children = (
 				967B393D2C6A0E6C0083E254 /* Progressor.swift */,
-				96F2B4182C7069EA00D69178 /* Device.swift */,
 				964304B82C82C9A800E45F41 /* WHC06.swift */,
 			);
-			path = Peripherals;
+			path = Devices;
 			sourceTree = "<group>";
 		};
 		968FA56B2C6A418D0082685C /* Mocks */ = {
@@ -213,10 +225,14 @@
 		96BA3B922C5F8C6600FB266B /* Screens */ = {
 			isa = PBXGroup;
 			children = (
+				96D402992CE0721C00A1884F /* ActionForm.swift */,
+				96D4029A2CE0721C00A1884F /* RepeaterForm.swift */,
+				96D4029B2CE0721C00A1884F /* RepeaterList.swift */,
+				9606E6F52CB175FE0014B899 /* RepeaterPlayer.swift */,
+				964760942C8B18CC000627AD /* RepeaterEditor.swift */,
 				96BA3B932C5F8C8800FB266B /* RepeaterMenuScreen.swift */,
-				96BA3B982C5F94DB00FB266B /* RepeaterScreen.swift */,
 				96BA3B9A2C5FA43800FB266B /* RepeaterAdderScreen.swift */,
-				96BA3BA12C5FC95C00FB266B /* NewActionScreen.swift */,
+				96BA3BA12C5FC95C00FB266B /* ActionEditor.swift */,
 			);
 			path = Screens;
 			sourceTree = "<group>";
@@ -224,6 +240,8 @@
 		96BA3B952C5F8F3300FB266B /* Models */ = {
 			isa = PBXGroup;
 			children = (
+				96D402A12CE085FC00A1884F /* RepeaterPlayerState.swift */,
+				96D402972CE04A0A00A1884F /* Rest.swift */,
 				96BA3B962C5F8F4500FB266B /* Repeater.swift */,
 				96BA3B9C2C5FAE5A00FB266B /* Action.swift */,
 			);
@@ -233,17 +251,172 @@
 		96BA3B9E2C5FB8E000FB266B /* Views */ = {
 			isa = PBXGroup;
 			children = (
+				96D402A32CE0866C00A1884F /* TargetRangeChart.swift */,
 				96BA3B9F2C5FB91300FB266B /* ActionEntryView.swift */,
 			);
 			path = Views;
 			sourceTree = "<group>";
 		};
-		96BA3BA32C61E38100FB266B /* Models */ = {
+		96D402772CE03D3A00A1884F /* App */ = {
 			isa = PBXGroup;
 			children = (
-				96BA3BA42C61E38E00FB266B /* WeightRecord.swift */,
+				96D4027C2CE03D8F00A1884F /* Configuration */,
+				96DFF8162C562355002E3E24 /* CraneApp.swift */,
+				96DFF8182C562355002E3E24 /* ContentView.swift */,
+			);
+			path = App;
+			sourceTree = "<group>";
+		};
+		96D402792CE03D6B00A1884F /* Core */ = {
+			isa = PBXGroup;
+			children = (
+				96D402A62CE08C4D00A1884F /* Environment */,
+				96D402862CE03FD500A1884F /* Utils */,
+				96D402802CE03E3400A1884F /* Persistence */,
+				96D4027F2CE03E1A00A1884F /* Services */,
+				96D4027D2CE03DB600A1884F /* Bluetooth */,
+			);
+			path = Core;
+			sourceTree = "<group>";
+		};
+		96D4027A2CE03D7100A1884F /* Common */ = {
+			isa = PBXGroup;
+			children = (
+				96D402912CE0445C00A1884F /* Constants */,
+				96D402842CE03EB400A1884F /* Preview */,
+				96D402832CE03EA800A1884F /* Extensions */,
+			);
+			path = Common;
+			sourceTree = "<group>";
+		};
+		96D4027B2CE03D8100A1884F /* Resources */ = {
+			isa = PBXGroup;
+			children = (
+				96DFF81C2C56235A002E3E24 /* Assets.xcassets */,
+				96DFF81E2C56235A002E3E24 /* Preview Content */,
+			);
+			path = Resources;
+			sourceTree = "<group>";
+		};
+		96D4027C2CE03D8F00A1884F /* Configuration */ = {
+			isa = PBXGroup;
+			children = (
+				966CCEDD2C5A546200C31C0D /* Info.plist */,
+			);
+			path = Configuration;
+			sourceTree = "<group>";
+		};
+		96D4027D2CE03DB600A1884F /* Bluetooth */ = {
+			isa = PBXGroup;
+			children = (
+				96D402952CE045E600A1884F /* Constants */,
+				96D4028F2CE043C900A1884F /* Models */,
+				96D4027E2CE03DC000A1884F /* Protocols */,
+				967B393A2C6A0DFF0083E254 /* Devices */,
+			);
+			path = Bluetooth;
+			sourceTree = "<group>";
+		};
+		96D4027E2CE03DC000A1884F /* Protocols */ = {
+			isa = PBXGroup;
+			children = (
+				96F2B4182C7069EA00D69178 /* Device.swift */,
+			);
+			path = Protocols;
+			sourceTree = "<group>";
+		};
+		96D4027F2CE03E1A00A1884F /* Services */ = {
+			isa = PBXGroup;
+			children = (
+				96D402892CE0408A00A1884F /* Protocols */,
+				96D4028A2CE0408A00A1884F /* ServiceContainer.swift */,
+				96F2B41F2C70A04C00D69178 /* DeviceManager.swift */,
+				96DD6E7A2C62FD2F00F13ABC /* DataManager.swift */,
+			);
+			path = Services;
+			sourceTree = "<group>";
+		};
+		96D402802CE03E3400A1884F /* Persistence */ = {
+			isa = PBXGroup;
+			children = (
+				96D402812CE03E8E00A1884F /* ModelContainer.swift */,
+			);
+			path = Persistence;
+			sourceTree = "<group>";
+		};
+		96D402832CE03EA800A1884F /* Extensions */ = {
+			isa = PBXGroup;
+			children = (
+				968FA5692C6A40B80082685C /* CBTypeAlias.swift */,
+			);
+			path = Extensions;
+			sourceTree = "<group>";
+		};
+		96D402842CE03EB400A1884F /* Preview */ = {
+			isa = PBXGroup;
+			children = (
+				964760A12C8B2997000627AD /* ModelContainerPreview.swift */,
+				964760A22C8B2997000627AD /* Preview+ModelContainer.swift */,
+			);
+			path = Preview;
+			sourceTree = "<group>";
+		};
+		96D402852CE03F0B00A1884F /* Testing */ = {
+			isa = PBXGroup;
+			children = (
+				968FA56B2C6A418D0082685C /* Mocks */,
+				964760A02C8B2994000627AD /* SampleData */,
+			);
+			path = Testing;
+			sourceTree = "<group>";
+		};
+		96D402862CE03FD500A1884F /* Utils */ = {
+			isa = PBXGroup;
+			children = (
+				963238282C87410500E3E85F /* DisplayLink.swift */,
+			);
+			path = Utils;
+			sourceTree = "<group>";
+		};
+		96D402892CE0408A00A1884F /* Protocols */ = {
+			isa = PBXGroup;
+			children = (
+				96D402872CE0408A00A1884F /* DataManaging.swift */,
+				96D402882CE0408A00A1884F /* DeviceManaging.swift */,
+			);
+			path = Protocols;
+			sourceTree = "<group>";
+		};
+		96D4028F2CE043C900A1884F /* Models */ = {
+			isa = PBXGroup;
+			children = (
+				96D4028E2CE043C900A1884F /* DeviceType.swift */,
 			);
 			path = Models;
+			sourceTree = "<group>";
+		};
+		96D402912CE0445C00A1884F /* Constants */ = {
+			isa = PBXGroup;
+			children = (
+				96D402922CE0446100A1884F /* AppConstants.swift */,
+			);
+			path = Constants;
+			sourceTree = "<group>";
+		};
+		96D402952CE045E600A1884F /* Constants */ = {
+			isa = PBXGroup;
+			children = (
+				96D402942CE045E600A1884F /* BluetoothConstants.swift */,
+			);
+			path = Constants;
+			sourceTree = "<group>";
+		};
+		96D402A62CE08C4D00A1884F /* Environment */ = {
+			isa = PBXGroup;
+			children = (
+				96D402A52CE08C4D00A1884F /* ServiceEnvironmentKey.swift */,
+			);
+			path = Environment;
 			sourceTree = "<group>";
 		};
 		96DFF80A2C562355002E3E24 = {
@@ -269,14 +442,12 @@
 		96DFF8152C562355002E3E24 /* Crane */ = {
 			isa = PBXGroup;
 			children = (
-				968FA56B2C6A418D0082685C /* Mocks */,
-				968FA5692C6A40B80082685C /* CBTypeAlias.swift */,
-				966CCEDD2C5A546200C31C0D /* Info.plist */,
+				96D402852CE03F0B00A1884F /* Testing */,
+				96D4027B2CE03D8100A1884F /* Resources */,
+				96D4027A2CE03D7100A1884F /* Common */,
+				96D402792CE03D6B00A1884F /* Core */,
+				96D402772CE03D3A00A1884F /* App */,
 				96DFF8422C562911002E3E24 /* Features */,
-				96DFF8162C562355002E3E24 /* CraneApp.swift */,
-				96DFF8182C562355002E3E24 /* ContentView.swift */,
-				96DFF81C2C56235A002E3E24 /* Assets.xcassets */,
-				96DFF81E2C56235A002E3E24 /* Preview Content */,
 			);
 			path = Crane;
 			sourceTree = "<group>";
@@ -311,7 +482,6 @@
 			children = (
 				96BA3B912C5F8BC900FB266B /* Repeaters */,
 				966CCEE02C5A5C1B00C31C0D /* Connect */,
-				9608F1BE2C5912E600B34E81 /* Common */,
 				96DFF8432C56298C002E3E24 /* Live */,
 			);
 			path = Features;
@@ -321,40 +491,17 @@
 			isa = PBXGroup;
 			children = (
 				9608F1C82C5931AA00B34E81 /* Screens */,
-				96DFF84C2C5632E6002E3E24 /* Actions */,
-				96DFF8462C562A49002E3E24 /* Models */,
 				96DFF8452C562A40002E3E24 /* Views */,
-				96DFF8442C562A2D002E3E24 /* Controllers */,
 			);
 			path = Live;
-			sourceTree = "<group>";
-		};
-		96DFF8442C562A2D002E3E24 /* Controllers */ = {
-			isa = PBXGroup;
-			children = (
-			);
-			path = Controllers;
 			sourceTree = "<group>";
 		};
 		96DFF8452C562A40002E3E24 /* Views */ = {
 			isa = PBXGroup;
 			children = (
+				9608F1C02C59225E00B34E81 /* LiveChart.swift */,
 			);
 			path = Views;
-			sourceTree = "<group>";
-		};
-		96DFF8462C562A49002E3E24 /* Models */ = {
-			isa = PBXGroup;
-			children = (
-			);
-			path = Models;
-			sourceTree = "<group>";
-		};
-		96DFF84C2C5632E6002E3E24 /* Actions */ = {
-			isa = PBXGroup;
-			children = (
-			);
-			path = Actions;
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
@@ -491,29 +638,46 @@
 			buildActionMask = 2147483647;
 			files = (
 				96DFF8192C562355002E3E24 /* ContentView.swift in Sources */,
+				96D402932CE0446100A1884F /* AppConstants.swift in Sources */,
 				966CCEE32C5A5C9600C31C0D /* ConnectScreen.swift in Sources */,
+				96D402982CE04A0A00A1884F /* Rest.swift in Sources */,
 				96BA3BA72C61FBB500FB266B /* UnitModel.swift in Sources */,
 				96F2B41E2C708BC700D69178 /* DeviceList.swift in Sources */,
-				96BA3BA22C5FC95C00FB266B /* NewActionScreen.swift in Sources */,
+				96D402962CE045E600A1884F /* BluetoothConstants.swift in Sources */,
+				96D402A42CE0866C00A1884F /* TargetRangeChart.swift in Sources */,
+				964760952C8B18D1000627AD /* RepeaterEditor.swift in Sources */,
+				96BA3BA22C5FC95C00FB266B /* ActionEditor.swift in Sources */,
 				9608F1CB2C5931E600B34E81 /* LiveScreen.swift in Sources */,
+				9606E6F62CB176020014B899 /* RepeaterPlayer.swift in Sources */,
 				96BA3B9B2C5FA43800FB266B /* RepeaterAdderScreen.swift in Sources */,
 				96BA3B972C5F8F4500FB266B /* Repeater.swift in Sources */,
 				96BA3B942C5F8C8800FB266B /* RepeaterMenuScreen.swift in Sources */,
 				967B393E2C6A0E700083E254 /* Progressor.swift in Sources */,
+				96D402822CE03E9200A1884F /* ModelContainer.swift in Sources */,
+				96D402A72CE08C4D00A1884F /* ServiceEnvironmentKey.swift in Sources */,
+				96D4029C2CE0721C00A1884F /* RepeaterList.swift in Sources */,
+				96D4029D2CE0721C00A1884F /* ActionForm.swift in Sources */,
+				96D4029E2CE0721C00A1884F /* RepeaterForm.swift in Sources */,
 				963238292C87410A00E3E85F /* DisplayLink.swift in Sources */,
+				96D4028B2CE0408A00A1884F /* DeviceManaging.swift in Sources */,
+				96D4028C2CE0408A00A1884F /* DataManaging.swift in Sources */,
+				96D4028D2CE0408A00A1884F /* ServiceContainer.swift in Sources */,
 				96DFF8172C562355002E3E24 /* CraneApp.swift in Sources */,
+				964760A42C8B2997000627AD /* ModelContainerPreview.swift in Sources */,
 				96BA3BA02C5FB91300FB266B /* ActionEntryView.swift in Sources */,
 				968FA56D2C6A41940082685C /* ProgressorMock.swift in Sources */,
+				964760A52C8B2A7F000627AD /* Preview+ModelContainer.swift in Sources */,
 				96DD6E7B2C62FD2F00F13ABC /* DataManager.swift in Sources */,
 				96F2B4192C7069EA00D69178 /* Device.swift in Sources */,
 				9608F1C12C59225E00B34E81 /* LiveChart.swift in Sources */,
 				964304BB2C83357300E45F41 /* WHC06Mock.swift in Sources */,
 				96BA3B9D2C5FAE5A00FB266B /* Action.swift in Sources */,
+				964760A72C8B2A8C000627AD /* SampleDataRepeater.swift in Sources */,
 				96F2B4202C70A05100D69178 /* DeviceManager.swift in Sources */,
+				96D402902CE043C900A1884F /* DeviceType.swift in Sources */,
 				964304B92C82C9A800E45F41 /* WHC06.swift in Sources */,
+				96D402A22CE085FC00A1884F /* RepeaterPlayerState.swift in Sources */,
 				968FA56A2C6A40C00082685C /* CBTypeAlias.swift in Sources */,
-				96BA3BA52C61E38E00FB266B /* WeightRecord.swift in Sources */,
-				96BA3B992C5F94DB00FB266B /* RepeaterScreen.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -602,7 +766,7 @@
 				GCC_WARN_UNINITIALIZED_AUTOS = YES_AGGRESSIVE;
 				GCC_WARN_UNUSED_FUNCTION = YES;
 				GCC_WARN_UNUSED_VARIABLE = YES;
-				IPHONEOS_DEPLOYMENT_TARGET = 17.5;
+				IPHONEOS_DEPLOYMENT_TARGET = 18.0;
 				LOCALIZATION_PREFERS_STRING_CATALOGS = YES;
 				MTL_ENABLE_DEBUG_INFO = INCLUDE_SOURCE;
 				MTL_FAST_MATH = YES;
@@ -659,7 +823,7 @@
 				GCC_WARN_UNINITIALIZED_AUTOS = YES_AGGRESSIVE;
 				GCC_WARN_UNUSED_FUNCTION = YES;
 				GCC_WARN_UNUSED_VARIABLE = YES;
-				IPHONEOS_DEPLOYMENT_TARGET = 17.5;
+				IPHONEOS_DEPLOYMENT_TARGET = 18.0;
 				LOCALIZATION_PREFERS_STRING_CATALOGS = YES;
 				MTL_ENABLE_DEBUG_INFO = NO;
 				MTL_FAST_MATH = YES;
@@ -676,11 +840,11 @@
 				ASSETCATALOG_COMPILER_GLOBAL_ACCENT_COLOR_NAME = AccentColor;
 				CODE_SIGN_STYLE = Automatic;
 				CURRENT_PROJECT_VERSION = 1;
-				DEVELOPMENT_ASSET_PATHS = "\"Crane/Preview Content\"";
+				DEVELOPMENT_ASSET_PATHS = "\"Crane/Resources/Preview Content\"";
 				DEVELOPMENT_TEAM = 98CXQYQ82R;
 				ENABLE_PREVIEWS = YES;
 				GENERATE_INFOPLIST_FILE = YES;
-				INFOPLIST_FILE = Crane/Info.plist;
+				INFOPLIST_FILE = Crane/App/Configuration/Info.plist;
 				INFOPLIST_KEY_NSBluetoothAlwaysUsageDescription = "Crane uses Bluetooth to find and maintain connections to your WH-C06 smart scale.";
 				INFOPLIST_KEY_NSBluetoothPeripheralUsageDescription = "Crane uses Bluetooth to find and maintain connections to your WH-C06 smart scale.";
 				INFOPLIST_KEY_UIApplicationSceneManifest_Generation = YES;
@@ -708,11 +872,11 @@
 				ASSETCATALOG_COMPILER_GLOBAL_ACCENT_COLOR_NAME = AccentColor;
 				CODE_SIGN_STYLE = Automatic;
 				CURRENT_PROJECT_VERSION = 1;
-				DEVELOPMENT_ASSET_PATHS = "\"Crane/Preview Content\"";
+				DEVELOPMENT_ASSET_PATHS = "\"Crane/Resources/Preview Content\"";
 				DEVELOPMENT_TEAM = 98CXQYQ82R;
 				ENABLE_PREVIEWS = YES;
 				GENERATE_INFOPLIST_FILE = YES;
-				INFOPLIST_FILE = Crane/Info.plist;
+				INFOPLIST_FILE = Crane/App/Configuration/Info.plist;
 				INFOPLIST_KEY_NSBluetoothAlwaysUsageDescription = "Crane uses Bluetooth to find and maintain connections to your WH-C06 smart scale.";
 				INFOPLIST_KEY_NSBluetoothPeripheralUsageDescription = "Crane uses Bluetooth to find and maintain connections to your WH-C06 smart scale.";
 				INFOPLIST_KEY_UIApplicationSceneManifest_Generation = YES;

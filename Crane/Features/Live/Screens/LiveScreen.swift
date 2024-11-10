@@ -1,43 +1,35 @@
-import Charts
 import SwiftUI
 
 struct LiveScreen: View {
-    let model = DataManager.model
+    @Environment(\.deviceManager) private var deviceManager
+    @Environment(\.dataManager) private var dataManager
 
     var body: some View {
         VStack {
-            HStack {
-                Button(action: {
-                    model.clearData()
-                }) {
-                    VStack {
-                        Text("Max").font(.headline)
-                        Text("\(String(format: "%.1f", model.maxVal))").font(
-                            .largeTitle
-                        ).monospaced()
-                    }.frame(maxWidth: .infinity, maxHeight: .infinity)
-                }.buttonStyle(.bordered).foregroundStyle(.foreground)
+            Text(String(format: "%.2f kg", dataManager.currentVal?.value ?? 0))
+                .font(.system(size: 48))
+                .bold()
+                .padding()
 
-                RoundedRectangle(
-                    cornerRadius: 25.0
-                ).fill(.regularMaterial).overlay {
-                    VStack {
-                        Text("Current").font(.headline)
-                        Text("\(String(format: "%.1f", model.currentVal ?? 0))")
-                            .font(.largeTitle).monospaced()
-                    }
-                }
+            LiveChart()
+                .frame(maxHeight: 200)
+                .padding()
+
+            Button("Clear") {
+                dataManager.clearData()
             }
-
-            LiveChart().frame(height: 500)
-
-        }.navigationTitle("Live Data").navigationBarTitleDisplayMode(.inline)
             .padding()
+        }
+        .navigationTitle("Live Data")
     }
 }
 
 #Preview {
+    let services = ServiceContainer()
+
     NavigationStack {
         LiveScreen()
+            .environment(\.deviceManager, services.deviceManager)
+            .environment(\.dataManager, services.dataManager)
     }
 }
