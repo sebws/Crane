@@ -9,13 +9,8 @@ import SwiftUI
     private var displayLink: DisplayLink?
 
     init() {
+        resetDataPoints()
         setupDisplayLink()
-    }
-
-    private func setupDisplayLink() {
-        displayLink = DisplayLink { [weak self] in
-            self?.updateInterpolatedPoints()
-        }
     }
 
     func addDataPoint(_ val: Double) {
@@ -30,11 +25,9 @@ import SwiftUI
     }
 
     private func updateInterpolatedPoints() {
-        guard let lastPoint = rawDataPoints.last else {
-            return
-        }
+        let lastPoint = rawDataPoints.last
 
-        interpolatedDataPoints.append(DataPoint(lastPoint.value))
+        interpolatedDataPoints.append(DataPoint(lastPoint?.value ?? 0))
         if interpolatedDataPoints.count > AppConstants.UI.chartDataPoints {
             interpolatedDataPoints.removeFirst()
         }
@@ -44,11 +37,21 @@ import SwiftUI
         currentVal = nil
         clearMaxVal()
         rawDataPoints.removeAll()
-        interpolatedDataPoints.removeAll()
+        resetDataPoints()
     }
 
     func clearMaxVal() {
         maxVal = nil
+    }
+
+    private func setupDisplayLink() {
+        displayLink = DisplayLink { [weak self] in
+            self?.updateInterpolatedPoints()
+        }
+    }
+
+    private func resetDataPoints() {
+        interpolatedDataPoints = (0..<AppConstants.UI.chartDataPoints).map { _ in DataPoint(0) }
     }
 }
 
