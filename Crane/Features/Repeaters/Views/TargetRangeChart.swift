@@ -17,7 +17,7 @@ struct TargetRangeChart: View {
 
     private var visibleRanges: [TargetRange] {
         allRanges.filter { range in
-            range.endTime > elapsedTime
+            range.endTime > elapsedTime - visibleDuration
                 && range.startTime < elapsedTime + visibleDuration
         }
     }
