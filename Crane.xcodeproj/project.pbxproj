@@ -43,6 +43,7 @@
 		96D402A22CE085FC00A1884F /* RepeaterPlayerState.swift in Sources */ = {isa = PBXBuildFile; fileRef = 96D402A12CE085FC00A1884F /* RepeaterPlayerState.swift */; };
 		96D402A42CE0866C00A1884F /* TargetRangeChart.swift in Sources */ = {isa = PBXBuildFile; fileRef = 96D402A32CE0866C00A1884F /* TargetRangeChart.swift */; };
 		96D402A72CE08C4D00A1884F /* ServiceEnvironmentKey.swift in Sources */ = {isa = PBXBuildFile; fileRef = 96D402A52CE08C4D00A1884F /* ServiceEnvironmentKey.swift */; };
+		96D402A92CE2151700A1884F /* Normalize.swift in Sources */ = {isa = PBXBuildFile; fileRef = 96D402A82CE2151700A1884F /* Normalize.swift */; };
 		96DD6E7B2C62FD2F00F13ABC /* DataManager.swift in Sources */ = {isa = PBXBuildFile; fileRef = 96DD6E7A2C62FD2F00F13ABC /* DataManager.swift */; };
 		96DFF8172C562355002E3E24 /* CraneApp.swift in Sources */ = {isa = PBXBuildFile; fileRef = 96DFF8162C562355002E3E24 /* CraneApp.swift */; };
 		96DFF8192C562355002E3E24 /* ContentView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 96DFF8182C562355002E3E24 /* ContentView.swift */; };
@@ -110,6 +111,7 @@
 		96D402A12CE085FC00A1884F /* RepeaterPlayerState.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = RepeaterPlayerState.swift; sourceTree = "<group>"; };
 		96D402A32CE0866C00A1884F /* TargetRangeChart.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TargetRangeChart.swift; sourceTree = "<group>"; };
 		96D402A52CE08C4D00A1884F /* ServiceEnvironmentKey.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ServiceEnvironmentKey.swift; sourceTree = "<group>"; };
+		96D402A82CE2151700A1884F /* Normalize.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Normalize.swift; sourceTree = "<group>"; };
 		96DD6E7A2C62FD2F00F13ABC /* DataManager.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = DataManager.swift; sourceTree = "<group>"; };
 		96DFF8132C562355002E3E24 /* Crane.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = Crane.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		96DFF8162C562355002E3E24 /* CraneApp.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CraneApp.swift; sourceTree = "<group>"; };
@@ -373,6 +375,7 @@
 		96D402862CE03FD500A1884F /* Utils */ = {
 			isa = PBXGroup;
 			children = (
+				96D402A82CE2151700A1884F /* Normalize.swift */,
 				963238282C87410500E3E85F /* DisplayLink.swift */,
 			);
 			path = Utils;
@@ -648,6 +651,7 @@
 				964760952C8B18D1000627AD /* RepeaterEditor.swift in Sources */,
 				96BA3BA22C5FC95C00FB266B /* ActionEditor.swift in Sources */,
 				9608F1CB2C5931E600B34E81 /* LiveScreen.swift in Sources */,
+				96D402A92CE2151700A1884F /* Normalize.swift in Sources */,
 				9606E6F62CB176020014B899 /* RepeaterPlayer.swift in Sources */,
 				96BA3B9B2C5FA43800FB266B /* RepeaterAdderScreen.swift in Sources */,
 				96BA3B972C5F8F4500FB266B /* Repeater.swift in Sources */,

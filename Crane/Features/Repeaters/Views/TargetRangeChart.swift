@@ -22,12 +22,6 @@ struct TargetRangeChart: View {
         }
     }
 
-    func normalize(value: TimeInterval, min: TimeInterval, max: TimeInterval, newMin: TimeInterval, newMax: TimeInterval) -> Double {
-        let oldRange = max - min
-        let newRange = newMax - newMin
-        return (((value - min) * newRange) / oldRange) + newMin
-    }
-
     var body: some View {
         Chart {
             // Target ranges - shift them to start from right edge
@@ -57,11 +51,10 @@ struct TargetRangeChart: View {
             // Live data - normalize to 0-0.5 using current time window
             ForEach(Array(dataManager.interpolatedDataPoints.enumerated()), id: \.0) { _, point in
                 let now = Date.timeIntervalSinceReferenceDate
-                let oldMin = now - visibleDuration * 0.5
-                let oldMax = now
-                let newMax = 0.5
-                let newMin = 0.0
-                let x = normalize(value: point.timestamp, min: oldMin, max: oldMax, newMin: newMin, newMax: newMax)
+                let x = point.timestamp.normalized(
+                    from: (now - visibleDuration * 0.5)...now,
+                    to: 0.0...0.5
+                )
                 LineMark(
                     x: .value("Time", x),
                     y: .value("Weight", point.value)
