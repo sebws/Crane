@@ -145,33 +145,52 @@ struct RepeaterPlayer: View {
 
             Spacer()
 
-            HStack {
+            HStack(spacing: 20) {
                 switch stateMachine.state {
                 case .idle:
-                    Button("Start") { stateMachine.start() }
-                        .buttonStyle(.borderedProminent)
-
-                case .countdown, .action, .rest:
-                    Button("Stop") { stateMachine.stop() }
-                        .buttonStyle(.bordered)
-                        .tint(.red)
-                    Button(action: { stateMachine.toggle() }) {
-                        Image(
-                            systemName: stateMachine.isPaused
-                                ? "play.fill" : "pause.fill")
-                    }
-                    .buttonStyle(.bordered)
-
-                case .completed:
-                    Button("Restart") {
-                        stateMachine.stop()
+                    Button {
                         stateMachine.start()
+                    } label: {
+                        Text("Start").frame(maxWidth: .infinity)
                     }
                     .buttonStyle(.borderedProminent)
+                    .frame(maxWidth: .infinity)
+
+                case .countdown, .action, .rest:
+                    Button {
+                        stateMachine.stop()
+                    } label: {
+                        Text("Stop").frame(maxWidth: .infinity)
+                    }
+                    .buttonStyle(.bordered)
+                    .tint(.red)
+                    .frame(maxWidth: .infinity)
+
+                    Button {
+                        stateMachine.toggle()
+                    } label: {
+                        Image(
+                            systemName: stateMachine.isPaused
+                                ? "play.fill" : "pause.fill"
+                        ).frame(maxWidth: .infinity)
+                    }
+                    .buttonStyle(.bordered)
+                    .frame(maxWidth: .infinity)
+
+                case .completed:
+                    Button {
+                        stateMachine.stop()
+                        stateMachine.start()
+                    } label: {
+                        Text("Restart").frame(maxWidth: .infinity)
+                    }
+                    .buttonStyle(.borderedProminent)
+                    .frame(maxWidth: .infinity)
                 }
             }
             .frame(height: 44)
-            .padding()
+            .padding(.horizontal)
+            .padding(.bottom, 40)
         }
         .padding()
         .navigationTitle("Playing Repeater")
