@@ -4,9 +4,15 @@ struct DeviceList: View {
     @Environment(\.deviceManager) private var deviceManager
 
     var body: some View {
-        List(DeviceType.allCases, id: \.self) { deviceType in
-            NavigationLink(value: deviceType) {
-                Label(deviceType.name, systemImage: deviceType.icon)
+        Group {
+            if deviceManager.selectedDevice?.state == .connected {
+                DeviceDetailsScreen()
+            } else {
+                List(DeviceType.allCases, id: \.self) { deviceType in
+                    NavigationLink(value: deviceType) {
+                        Label(deviceType.name, systemImage: deviceType.icon)
+                    }
+                }
             }
         }
         .navigationTitle("Connect Device")

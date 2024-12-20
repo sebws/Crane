@@ -7,7 +7,6 @@ private let STABLE_OFFSET = 16
 @Observable class WHC06: NSObject, Device {
     let type: DeviceType = .whc06
     private(set) var state: ConnectionState = .disconnected
-    private(set) var name: String?
     private(set) var selectedPeripheral: CBPeripheral?
     private(set) var discoveredDeviceOptions: [CBPeripheral] = []
 
@@ -18,7 +17,7 @@ private let STABLE_OFFSET = 16
         self.dataManager = dataManager
         super.init()
         self.centralManager = CBCentralManagerFactory.instance(
-            delegate: self, queue: .main, forceMock: false)
+            delegate: self, queue: .main, forceMock: true)
     }
 
     func startScanning() {

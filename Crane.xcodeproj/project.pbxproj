@@ -52,6 +52,7 @@
 		96DFF82A2C56235B002E3E24 /* CraneTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 96DFF8292C56235B002E3E24 /* CraneTests.swift */; };
 		96DFF8342C56235B002E3E24 /* CraneUITests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 96DFF8332C56235B002E3E24 /* CraneUITests.swift */; };
 		96DFF8362C56235B002E3E24 /* CraneUITestsLaunchTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 96DFF8352C56235B002E3E24 /* CraneUITestsLaunchTests.swift */; };
+		96F1BA662CF197880016A28F /* DeviceDetailsScreen.swift in Sources */ = {isa = PBXBuildFile; fileRef = 96F1BA652CF197880016A28F /* DeviceDetailsScreen.swift */; };
 		96F2B4192C7069EA00D69178 /* Device.swift in Sources */ = {isa = PBXBuildFile; fileRef = 96F2B4182C7069EA00D69178 /* Device.swift */; };
 		96F2B41E2C708BC700D69178 /* DeviceList.swift in Sources */ = {isa = PBXBuildFile; fileRef = 96F2B41D2C708BC400D69178 /* DeviceList.swift */; };
 		96F2B4202C70A05100D69178 /* DeviceManager.swift in Sources */ = {isa = PBXBuildFile; fileRef = 96F2B41F2C70A04C00D69178 /* DeviceManager.swift */; };
@@ -123,6 +124,7 @@
 		96DFF82F2C56235B002E3E24 /* CraneUITests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = CraneUITests.xctest; sourceTree = BUILT_PRODUCTS_DIR; };
 		96DFF8332C56235B002E3E24 /* CraneUITests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CraneUITests.swift; sourceTree = "<group>"; };
 		96DFF8352C56235B002E3E24 /* CraneUITestsLaunchTests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CraneUITestsLaunchTests.swift; sourceTree = "<group>"; };
+		96F1BA652CF197880016A28F /* DeviceDetailsScreen.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = DeviceDetailsScreen.swift; sourceTree = "<group>"; };
 		96F2B4182C7069EA00D69178 /* Device.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Device.swift; sourceTree = "<group>"; };
 		96F2B41D2C708BC400D69178 /* DeviceList.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = DeviceList.swift; sourceTree = "<group>"; };
 		96F2B41F2C70A04C00D69178 /* DeviceManager.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = DeviceManager.swift; sourceTree = "<group>"; };
@@ -182,6 +184,7 @@
 		966CCEE12C5A5C3600C31C0D /* Screens */ = {
 			isa = PBXGroup;
 			children = (
+				96F1BA652CF197880016A28F /* DeviceDetailsScreen.swift */,
 				96F2B41D2C708BC400D69178 /* DeviceList.swift */,
 				966CCEE22C5A5C9600C31C0D /* ConnectScreen.swift */,
 			);
@@ -669,6 +672,7 @@
 				96DFF8172C562355002E3E24 /* CraneApp.swift in Sources */,
 				964760A42C8B2997000627AD /* ModelContainerPreview.swift in Sources */,
 				96BA3BA02C5FB91300FB266B /* ActionEntryView.swift in Sources */,
+				96F1BA662CF197880016A28F /* DeviceDetailsScreen.swift in Sources */,
 				968FA56D2C6A41940082685C /* ProgressorMock.swift in Sources */,
 				964760A52C8B2A7F000627AD /* Preview+ModelContainer.swift in Sources */,
 				96DD6E7B2C62FD2F00F13ABC /* DataManager.swift in Sources */,

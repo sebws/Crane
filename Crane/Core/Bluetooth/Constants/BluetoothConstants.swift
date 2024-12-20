@@ -1,13 +1,6 @@
 import CoreBluetoothMock
 import Foundation
 
-// MARK: - Progressor Constants
-struct ProgressorConstants {
-  static let controlService = CBUUID(string: "7e4e1701-1ea6-40c9-9dcc-13d34ffead57")
-  static let controlCharacteristic = CBUUID(string: "7e4e1703-1ea6-40c9-9dcc-13d34ffead57")
-  static let dataCharacteristic = CBUUID(string: "7e4e1702-1ea6-40c9-9dcc-13d34ffead57")
-}
-
 // MARK: - Device Constants
 extension CBUUID {
   struct Progressor {
@@ -29,7 +22,7 @@ extension CBUUID {
 extension CBMCharacteristicMock {
   static let progressorControlCharacteristic = CBMCharacteristicMock(
     type: .progressor.controlCharacteristic,
-    properties: [.write],
+    properties: [.write, .writeWithoutResponse],
     descriptors: CBMClientCharacteristicConfigurationDescriptorMock()
   )
 
@@ -44,6 +37,9 @@ extension CBMServiceMock {
   static let progressorService = CBMServiceMock(
     type: .progressor.controlService,
     primary: true,
-    characteristics: .progressorDataCharacteristic, .progressorControlCharacteristic
+    characteristics: [
+      .progressorDataCharacteristic,
+      .progressorControlCharacteristic
+    ]
   )
 }

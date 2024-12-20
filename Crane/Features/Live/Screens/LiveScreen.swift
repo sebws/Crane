@@ -21,6 +21,12 @@ struct LiveScreen: View {
             .padding()
         }
         .navigationTitle("Live Data")
+        .onAppear {
+            deviceManager.selectedDevice?.onLiveDataAppearing()
+        }
+        .onDisappear {
+            deviceManager.selectedDevice?.onLiveDataDisappearing()
+        }
     }
 }
 

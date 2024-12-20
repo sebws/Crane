@@ -20,15 +20,17 @@ struct ConnectScreen: View {
                         HStack {
                             Text(peripheral.name ?? "Unknown Device")
                             Spacer()
-                            if deviceManager.selectedDevice?.selectedPeripheral?
-                                .identifier == peripheral.identifier
-                            {
-                                Image(systemName: "checkmark.circle.fill")
-                                    .foregroundColor(.green)
-                            } else if connectingPeripheral?.identifier
-                                == peripheral.identifier
-                            {
-                                ProgressView()
+                            if (deviceManager.selectedDevice?.selectedPeripheral?
+                                .identifier == peripheral.identifier) {
+                                switch (deviceManager.selectedDevice?.state) {
+                                case .connected:
+                                    Image(systemName: "checkmark.circle.fill")
+                                        .foregroundColor(.green)
+                                case .disconnecting, .disconnected:
+                                    EmptyView()
+                                default:
+                                    ProgressView()
+                                }
                             }
                         }
                     }

@@ -10,6 +10,7 @@ struct TargetRange: Equatable, Identifiable {
 
 struct TargetRangeChart: View {
     @Environment(\.dataManager) private var dataManager
+    @Environment(\.deviceManager) private var deviceManager
     let allRanges: [TargetRange]
     let elapsedTime: TimeInterval
     let tolerance: Double = 2.0
@@ -63,5 +64,11 @@ struct TargetRangeChart: View {
             .foregroundStyle(.blue)
         }
         .chartXScale(domain: 0...1)
+        .onAppear {
+            deviceManager.selectedDevice?.onLiveDataAppearing()
+        }
+        .onDisappear {
+            deviceManager.selectedDevice?.onLiveDataDisappearing()
+        }
     }
 }

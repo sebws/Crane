@@ -1,10 +1,10 @@
 import CoreBluetoothMock
 import Foundation
+import SwiftUI
 
 @Observable class Progressor: NSObject, Device {
     let type: DeviceType = .progressor
     private(set) var state: ConnectionState = .disconnected
-    private(set) var name: String?
     private(set) var selectedPeripheral: CBPeripheral?
     private(set) var discoveredDeviceOptions: [CBPeripheral] = []
 
@@ -19,9 +19,77 @@ import Foundation
         self.centralManager = CBCentralManagerFactory.instance(
             delegate: self, queue: .main, forceMock: false)
     }
+}
 
+// MARK: - Device Lifecycle Events
+extension Progressor {
+    func onLiveDataAppearing() {
+        startMeasurement()
+    }
+
+    func onLiveDataDisappearing() {
+        stopMeasurement()
+    }
+}
+
+// MARK: - Device Controls
+extension Progressor {
+    @ViewBuilder
+    func controlsView() -> AnyView {
+        AnyView(ProgressorControlsView(device: self))
+    }
+
+    private struct ProgressorControlsView: View {
+        let device: Progressor
+
+        var body: some View {
+            Section("Controls") {
+                Button {
+                    device.startMeasurement()
+                } label: {
+                    Label("Start", systemImage: "play.circle.fill")
+                }
+
+                Button {
+                    device.stopMeasurement()
+                } label: {
+                    Label("Stop", systemImage: "stop.circle.fill")
+                }
+            }
+        }
+    }
+}
+
+// MARK: - Private Methods
+extension Progressor {
+    internal func startMeasurement() {
+        guard let characteristic = controlCharacteristic,
+            let peripheral = selectedPeripheral
+        else { return }
+        let command: [UInt8] = [0x65,0x00]
+        peripheral.writeValue(
+            Data(command),
+            for: characteristic,
+            type: .withoutResponse
+        )
+    }
+
+    internal func stopMeasurement() {
+        guard let characteristic = controlCharacteristic,
+            let peripheral = selectedPeripheral
+        else { return }
+        let command: [UInt8] = [0x66,0x00]
+        peripheral.writeValue(
+            Data(command),
+            for: characteristic,
+            type: .withoutResponse
+        )
+    }
+}
+
+// MARK: - Connection Management
+extension Progressor {
     func startScanning() {
-        print("Scanning for Progressor")
         guard centralManager?.state == .poweredOn else {
             print(
                 "Cannot start scanning: Bluetooth is not powered on", centralManager,
@@ -29,7 +97,7 @@ import Foundation
             return
         }
 
-        centralManager?.scanForPeripherals(withServices: [.progressor.controlService])
+        centralManager?.scanForPeripherals(withServices: nil)
     }
 
     func stopScanning() {
@@ -67,7 +135,6 @@ extension Progressor: CBCentralManagerDelegate {
         rssi RSSI: NSNumber
     ) {
         if !discoveredDeviceOptions.contains(where: { $0.identifier == peripheral.identifier }) {
-            print("Progressor adding discovered device: \(peripheral.name ?? "unnamed")")
             discoveredDeviceOptions.append(peripheral)
         }
     }
@@ -113,7 +180,6 @@ extension Progressor: CBPeripheralDelegate {
         error: Error?
     ) {
         guard let characteristics = service.characteristics else { return }
-
         for characteristic in characteristics {
             switch characteristic.uuid {
             case .progressor.controlCharacteristic:
@@ -138,13 +204,14 @@ extension Progressor: CBPeripheralDelegate {
     ) {
         guard characteristic.uuid == .progressor.dataCharacteristic,
             let data = characteristic.value,
-            data.count >= 2
+            data.count >= 6
         else {
             return
         }
 
+        // Skip type (1 byte) and length (1 byte)
         let weight = data.withUnsafeBytes { buffer in
-            buffer.load(as: Int16.self)
+            buffer.loadUnaligned(fromByteOffset: 2, as: Float32.self)
         }
 
         let val = Double(weight) / 100.0

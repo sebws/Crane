@@ -12,12 +12,37 @@ protocol Device: AnyObject, ObservableObject, CBCentralManagerDelegate, CBPeriph
     func stopScanning()
     func connect(to peripheral: CBPeripheral)
     func disconnect()
+    func startMeasurement()
+    func stopMeasurement()
+
+    // View lifecycle events
+    func onLiveDataAppearing()
+    func onLiveDataDisappearing()
+
+    @ViewBuilder
+    func controlsView() -> AnyView
 }
 
-enum ConnectionState {
-    case disconnected
-    case connecting
-    case connected
-    case disconnecting
-    case discoveringServices
+enum ConnectionState: String {
+    case disconnected = "Disconnected"
+    case connecting = "Connecting"
+    case connected = "Connected"
+    case disconnecting = "Disconnecting"
+    case discoveringServices = "Discovering services"
+}
+
+// Default implementation
+extension Device {
+    func onLiveDataAppearing() {}
+    func onLiveDataDisappearing() {}
+    func startMeasurement() {}
+    func stopMeasurement() {}
+    var name: String? {
+        get { return selectedPeripheral?.name }
+    }
+
+    @ViewBuilder
+    func controlsView() -> AnyView {
+        AnyView(EmptyView())
+    }
 }

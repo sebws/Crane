@@ -22,7 +22,7 @@ import SwiftUI
         case .whc06:
             WHC06(dataManager: dataManager)
         }
-        
+
         self.selectedDevice?.disconnect()
         self.selectedDevice = device
     }
