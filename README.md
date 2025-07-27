@@ -7,3 +7,5 @@ The project started with using the Weiheng WHC06, however it is not as accurate 
 https://github.com/user-attachments/assets/468ebd77-0afa-4dd3-b45f-b3fc84311c33
 
 Currently a work-in-progress and not published to the app store.
+
+At present, your best bet is Frez (formerly ClimbHarder), which isn't open source but accomplishes the same goal and is actually working and published!
